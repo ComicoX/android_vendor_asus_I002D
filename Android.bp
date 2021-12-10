@@ -59,7 +59,7 @@ android_app_import {
 	name: "AsusCamera",
 	owner: "asus",
 	apk: "proprietary/priv-app/AsusCamera/AsusCamera.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -81,6 +81,17 @@ android_app_import {
 	name: "AsusGalleryBurst",
 	owner: "asus",
 	apk: "proprietary/priv-app/AsusGalleryBurst/AsusGalleryBurst.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "AsusVisualMaster",
+	owner: "asus",
+	apk: "proprietary/priv-app/AsusVisualMaster/AsusVisualMaster.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -269,6 +280,13 @@ dex_import {
 }
 
 dex_import {
+	name: "audiosphere",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/audiosphere.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "com.android.hotwordenrollment.common.util",
 	owner: "asus",
 	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
@@ -422,9 +440,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "xdivert",
+	name: "uimgbaservice",
 	owner: "asus",
-	apk: "proprietary/system_ext/app/xdivert/xdivert.apk",
+	apk: "proprietary/system_ext/app/uimgbaservice/uimgbaservice.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -445,9 +463,135 @@ android_app_import {
 }
 
 dex_import {
+	name: "com.qualcomm.qti.imscmservice-V2.0-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.qualcomm.qti.imscmservice-V2.1-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.qualcomm.qti.imscmservice-V2.2-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.qualcomm.qti.uceservice-V2.0-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.qualcomm.qti.uceservice-V2.1-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.qualcomm.qti.uceservice-V2.2-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "embmslibrary",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/embmslibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "uimgbalibrary",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/uimgbalibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "uimgbamanagerlibrary",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/uimgbamanagerlibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "uimservicelibrary",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/uimservicelibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "vendor.qti.hardware.alarm-V1.0-java",
 	owner: "asus",
 	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.callcapability-V1.0-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.callinfo-V1.0-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.factory-V1.0-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.factory-V1.1-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V1.0-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V1.1-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V2.0-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V2.1-java",
+	owner: "asus",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar"],
 	system_ext_specific: true,
 }
 
